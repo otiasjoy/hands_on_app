@@ -11,5 +11,5 @@ func main() {
 		func(w http.ResponseWriter, r *http.Request) {
 			fmt.Fprint(w, "Hello World!")
 		})
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":80", nil))
 }
