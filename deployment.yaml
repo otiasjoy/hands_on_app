@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hands-on-app-deployment
+spec:
+  selector:
+    matchLabels:
+      app: hands-on-app
+  # Podをいくつ起動するか設定
+  replicas: 2
+  # Podの定義テンプレート
+  template:
+    metadata:
+      labels:
+        app: hands-on-app
+    spec:
+      containers:
+      - name: hands-on-app
+        image: hands-on-app:1.0.0
+        ports:
+          - containerPort: 80
