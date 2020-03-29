@@ -1,0 +1,1 @@
+# Docker/Kubernetesハンズオン用アプリケーション
