@@ -3,13 +3,10 @@ kind: Service
 metadata:
   name: hands-on-app-service
 spec:
-  # 外部からもアクセスできるようにする
-  type: LoadBalancer
   # hands-on-appというラベルがついているPodにトラウィックを分散
   selector:
     app: hands-on-app
   # ポート8081 の通信をPodの80ポートにリダイレクト
   ports:
-  - protocol: TCP
-    port: 8081
+  - port: 8082
     targetPort: 80
