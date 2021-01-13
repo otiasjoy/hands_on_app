@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hands-on-app
-        image: hands-on-app:1.0.0
+        image: grhg/hands_on_app:v0.0.2
         ports:
           - containerPort: 80
